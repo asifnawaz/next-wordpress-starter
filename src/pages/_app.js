@@ -39,7 +39,7 @@ App.getInitialProps = async function (appContext) {
     count: 5,
   });
 
- /* const { menus } = await getAllMenus();
+  const { menus } = await getAllMenus();
 
   const defaultNavigation = createMenuFromPages({
     locations: [MENU_LOCATION_NAVIGATION_DEFAULT],
@@ -47,14 +47,13 @@ App.getInitialProps = async function (appContext) {
   });
 
   menus.push(defaultNavigation);
-	//  menus,
-  
-	*/
+
   return {
     ...appProps,
     metadata: await getSiteMetadata(),
     recentPosts,
     categories,
+    menus,
   };
 };
 
