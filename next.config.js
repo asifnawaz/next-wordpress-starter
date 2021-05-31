@@ -17,14 +17,14 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   // verbose: true,
 
   env: {
-    WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
-    WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
-    WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, false),
+    WORDPRESS_GRAPHQL_ENDPOINT: 'https://urdunews.ga/graphql',
+    WORDPRESS_MENU_LOCATION_NAVIGATION: 'PRIMARY',
+    WORDPRESS_PLUGIN_SEO: false,
 
     // By default, the number of posts per page used in pagination is 10.
     // This can be modified by setting the variable POSTS_PER_PAGE to a
     // custom number.
-    // POSTS_PER_PAGE: 10,
+     POSTS_PER_PAGE: 3,
 
     // The image directory for open graph images will be saved at the location above
     // with `public` prepended. By default, images will be saved at /public/images/og
